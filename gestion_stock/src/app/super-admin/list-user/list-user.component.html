@@ -1,0 +1,24 @@
+<button mat-button (click)="addUser()">Add User</button>
+<div *ngFor="let u of users">
+  <mat-card class="example-card" style="margin :20px ;border: 1px solid" >
+  <mat-card-header>
+
+    <mat-card-title>{{u.nom}}</mat-card-title>
+
+  </mat-card-header>
+  <img mat-card-image src="" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+
+    <h5 class="card-title">{{u.email}}</h5>
+    <h5 class="card-title">{{u.telephone}}</h5>
+    <h5 class="card-title">{{u.adresse}}</h5>
+    <h5 class="card-title">{{u.logo}}</h5>
+    <h5 class="card-title">{{u.fournisseurs}}</h5>
+    <h5 class="card-title">{{u.role}}</h5>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="editUser(u?.idUser)">Edit</button>
+    <button mat-button>Delete</button>
+  </mat-card-actions>
+</mat-card>
+</div>
