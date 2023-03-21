@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
-import { FournisseurService } from './../../shared/services/fournisseur.service';
-import { Fournisseur } from './../../shared/models/fournisseur.model';
+import { FournisseurService } from './../../zshared/services/fournisseur.service';
+import { Fournisseur } from './../../zshared/models/fournisseur.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -1,5 +1,5 @@
-import { Produit } from './../../shared/models/produit.model';
-import { ProduitService } from './../../shared/services/produit.service';
+import { Produit } from './../../zshared/models/produit.model';
+import { ProduitService } from './../../zshared/services/produit.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

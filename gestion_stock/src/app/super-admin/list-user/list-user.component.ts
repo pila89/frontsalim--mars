@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
-import { User } from '../../shared/models/user.model';
-import { UserService } from '../../shared/services/user.service';
+import { User } from '../../zshared/models/user.model';
+import { UserService } from '../../zshared/services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-user.component.scss'],
 })
 export class ListUserComponent implements OnInit {
-  public users: User[]=[];
+  public users: User[] = [];
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
@@ -21,19 +21,38 @@ export class ListUserComponent implements OnInit {
       this.users = data;
     });
   }
-
-  addUser() {
-    this.router.navigate(['/super-admin/add-user']);
+  updateUser(idUser:any){
+    this.router.navigate([`super-admin/edit-user/${idUser}`])
   }
-  editUser(idUser:number|undefined){
-    this.router.navigate([`/super-admin/edit-user/${idUser}`])
-  }
-  deleteUser(user:any){
-this.userService.deleteUserById(user.idUser).subscribe(()=>
-  this.userService.getAllUser().subscribe(data=>{
-    this.users=data;
-  })
-)
+  deleteUser(idUser: any) {
+    console.log();
 
+    this.userService.deleteUserById(idUser).subscribe(() =>
+      this.userService.getAllUser().subscribe((data) => {
+        this.users = data;
+      })
+    );
   }
 }
+
+// this.load();
+// load() {
+//   this.userService.getAllUser().subscribe((data) => {
+//     this.users = data;
+//   });
+// }
+
+//addUser() {
+//     this.router.navigate(['/super-admin/add-user']);
+//   }
+//   editUser(idUser:number|undefined){
+//     this.router.navigate([`/super-admin/edit-user/${idUser}`])
+//   }
+//   deleteUser(user:any){
+// this.userService.deleteUserById(user.idUser).subscribe(()=>
+//   this.userService.getAllUser().subscribe(data=>{
+//     this.users=data;
+//   })
+// )
+
+//   }

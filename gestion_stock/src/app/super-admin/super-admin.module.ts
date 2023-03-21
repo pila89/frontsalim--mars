@@ -10,6 +10,8 @@ import { SuperAdminComponent } from './super-admin.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { AddUserComponent } from './add-user/add-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import {MatInputModule} from '@angular/material/input';
     ListUserComponent,
     AddEditUserComponent,
     UserCardComponent,
+    AddUserComponent,
+    EditUserComponent,
   ],
   imports: [
     CommonModule,
