@@ -17,7 +17,7 @@ export class UserService {
 
   getUserById(id: number): Observable<User> {
     return this.httpClient.get<User>(
-      `http://localhost:8080/user/getUserById/${id}`
+      `http://localhost:8080/user/getUser/${id}`
     );
   }
 
@@ -29,7 +29,7 @@ export class UserService {
   }
 
   updateUser(user: User): Observable<User> {
-    return this.httpClient.put(`http://localhost:8080/user/updateUser`, user);
+    return this.httpClient.put(`http://localhost:8080/user/update`, user);
   }
 
   getUserByNom(nom: string): Observable<User> {
@@ -38,9 +38,9 @@ export class UserService {
     );
   }
 
-  deleteUserById(id: number): void {
-     this.httpClient.delete(
-      `http://localhost:8080/user/deleteUserById/${id}`
+  deleteUserById(id: number): any {
+     return this.httpClient.delete(
+      `http://localhost:8080/user/delete/${id}`
     );
   }
 }

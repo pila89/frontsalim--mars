@@ -1,1 +1,31 @@
-<p>add-edit-user works!</p>
+<p>Add user </p>
+<form *ngIf="isLoaded" [formGroup]="userForm">
+
+<mat-form-field appearance="fill">
+  <mat-label>nom</mat-label>
+  <input formControlName="nom" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>email</mat-label>
+  <input formControlName="email"matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>telephone</mat-label>
+  <input formControlName="telephone"matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>adresse</mat-label>
+  <input formControlName="adresse" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>logo</mat-label>
+  <input formControlName="logo"matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>role</mat-label>
+  <input formControlName="role"matInput>
+</mat-form-field>
+</form>
+<button mat-button (click)="confirmer()">Confirmer</button>
+<button mat-button color="primary">Annuler</button>
+

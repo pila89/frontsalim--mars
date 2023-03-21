@@ -25,7 +25,15 @@ export class ListUserComponent implements OnInit {
   addUser() {
     this.router.navigate(['/super-admin/add-user']);
   }
-  editUser(idUser:any){
+  editUser(idUser:number|undefined){
     this.router.navigate([`/super-admin/edit-user/${idUser}`])
+  }
+  deleteUser(user:any){
+this.userService.deleteUserById(user.idUser).subscribe(()=>
+  this.userService.getAllUser().subscribe(data=>{
+    this.users=data;
+  })
+)
+
   }
 }
