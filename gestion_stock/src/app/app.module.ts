@@ -1,20 +1,26 @@
-import { DeleteModalComponent } from './zshared/components/delete-modal/delete-modal.component';
-import { ConfirmationModalComponent } from './zshared/components/confirmation-modal/confiramtion-modal.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ToastComponent } from './zshared/components/toast/toast.component';
-import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+import { ConfirmationModalComponent } from './shared/components/confirmation-modal/confiramtion-modal.component';
+import { ToastComponent } from './shared/components/toast/toast.component';
+import { DeleteModalComponent } from './shared/components/delete-modal/delete-modal.component';
+import { AccessDeniedComponent } from './shared/components/access-denied/access-denied.component';
+import { NotFoundComponentComponent } from './shared/components/not-found-component/not-found-component.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ConfirmationModalComponent,
     ToastComponent,
     DeleteModalComponent,
+    AccessDeniedComponent,
+    NotFoundComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +29,8 @@ import {MatSelectModule} from '@angular/material/select';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
