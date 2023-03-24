@@ -10,7 +10,10 @@ import { FournisseurService } from 'src/app/shared/services/fournisseur.service'
   styleUrls: ['./edit-fournisseur.component.scss'],
 })
 export class EditFournisseurComponent implements OnInit {
-  public fournisseurForm?: FormGroup;
+  fournisseurForm!: FormGroup;
+  public isRecupereded: boolean = false;
+  private idFournisseur: any;
+  public data: any;
   constructor(
     private fournisseurService: FournisseurService,
     private router: Router,
@@ -18,18 +21,36 @@ export class EditFournisseurComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.load();
+    this.activatedRoute.paramMap.subscribe((paramMap) => {
+      this.idFournisseur = paramMap.get('id');
+      this.fournisseurService
+        .getFournisseurById(this.idFournisseur)
+        .subscribe((data) => {
+          this.isRecupereded = true;
+          this.data = data;
+          console.log(data
+            );
+
+          this.load();
+        });
+    });
   }
   load() {
     this.fournisseurForm = new FormGroup({
-      idFournisseur: new FormControl(''),
-      nom: new FormControl(''),
-      email: new FormControl(''),
-      telephone: new FormControl(''),
-      adresse: new FormControl(''),
-      logo: new FormControl(''),
-      produits: new FormControl(''),
+      nom: new FormControl(this.data.nom),
+      email: new FormControl(this.data.email),
+      telephone: new FormControl(this.data.telephone),
+      adresse: new FormControl(this.data.adresse),
+      logo: new FormControl(this.data.logo),
     });
   }
-
+  confirmer() {
+    const data = this.fournisseurForm?.value;
+    this.fournisseurService.updateFournisseur(data).subscribe(() => {
+      this.router.navigate(['admin/list-fournisseur']);
+    });
+  }
+  annuler() {
+    this.router.navigate(['admin/list-fournisseur']);
+  }
 }

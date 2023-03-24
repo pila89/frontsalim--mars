@@ -25,7 +25,7 @@ export class FournisseurService {
 
   getFournisseurById(id: number): Observable<Fournisseur> {
     return this.httpClient.get<Fournisseur>(
-      `http://localhost:8080/fournisseurs/getFournisseurByNom/${id}`
+      `http://localhost:8080/fournisseurs/getFournisseur/${id}`
     );
   }
 

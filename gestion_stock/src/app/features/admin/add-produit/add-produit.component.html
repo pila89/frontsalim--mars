@@ -1,1 +1,37 @@
-<p>add-produit works!</p>
+<form [formGroup]="produitForms">
+  <mat-form-field appearance="fill">
+    <mat-label>labelle</mat-label>
+    <input formControlName="labelle" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>photoface</mat-label>
+    <input formControlName="photoface" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>quantiteSotock</mat-label>
+    <input formControlName="quantiteSotock" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>prixPromotion</mat-label>
+    <input formControlName="prixPromotion" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>dateExpiration</mat-label>
+    <input formControlName="dateExpiration" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>description</mat-label>
+    <input formControlName="description" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>photoProfil</mat-label>
+    <input formControlName="photoProfil" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>prix</mat-label>
+    <input formControlName="prix" matInput>
+  </mat-form-field>
+</form>
+<button (click)="confirmer()">Confirm</button>
+<button (click)="cancel()">Cancel</button>
+

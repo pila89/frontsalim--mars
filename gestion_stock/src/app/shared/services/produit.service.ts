@@ -10,7 +10,7 @@ export class ProduitService {
   constructor(private httpClient: HttpClient) {}
 
   addProduit(produit: Produit): Observable<Produit> {
-    return this.httpClient?.post<Produit>(
+    return this.httpClient.post<Produit>(
       `http://localhost:8080/produits/addProduit`,
       produit
     );
@@ -20,19 +20,25 @@ export class ProduitService {
     produit: Produit,
     idFournisseur: number
   ): Observable<Produit> {
-    return this.httpClient?.post<Produit>(
+    return this.httpClient.post<Produit>(
       `http://localhost:8080/produits/addProduitToFournisseur/${idFournisseur}`,
       produit
     );
   }
   getAllProduits(): Observable<Produit[]> {
-    return this.httpClient?.get<Produit[]>(
+    return this.httpClient.get<Produit[]>(
       `http://localhost:8080/produits/getAllProduits`
     );
   }
   getProduitById(id: number): Observable<Produit> {
-    return this.httpClient?.get<Produit>(
+    return this.httpClient.get<Produit>(
       `http://localhost:8080/produits/prouduit/${id}`
+    );
+  }
+
+  deleteProduitById(id: number): Observable<Produit> {
+    return this.httpClient.delete<Produit>(
+      `http://localhost:8080/produits/produit/${id}`
     );
   }
 }

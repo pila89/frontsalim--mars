@@ -1,1 +1,24 @@
-<p>list-produit works!</p>
+<h1>ADD PRODUIT</h1>
+<button mat-button routerLink="/admin/add-produit"> Add</button>
+<div *ngFor="let p of produits">
+  <mat-card  class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{p.labelle}}</mat-card-title>
+      <mat-card-title>{{p.photoface}}</mat-card-title>
+      <mat-card-title>{{p.quantiteSotock}}</mat-card-title>
+      <mat-card-title>{{p.prixPromotion}}</mat-card-title>
+      <mat-card-title>{{p.description}}</mat-card-title>
+      <mat-card-title>{{p.photoProfil}}</mat-card-title>
+      <mat-card-title>{{p.prix}}</mat-card-title>
+      <mat-card-title>{{p.dateExpiration}}</mat-card-title>
+      <!-- <mat-card-title>{{p.prix}}</mat-card-title> -->
+    </mat-card-header>
+
+    <mat-card-content>sds
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="updateProduit(p.idProduit)">Edit </button>
+      <button (click)="deleteProduit(p.idProduit)"> Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
