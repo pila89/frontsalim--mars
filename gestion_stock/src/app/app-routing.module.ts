@@ -4,11 +4,12 @@ import { AccessDeniedComponent } from './shared/components/access-denied/access-
 import { NotFoundComponentComponent } from './shared/components/not-found-component/not-found-component.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/authentication/login',
-    pathMatch: 'full',
-  },
+  // {
+  //   path: '',
+  //   redirectTo: '/authentication/login',
+  //   pathMatch: 'full',
+  // },
+
   {
     path: 'authentifcation',
     loadChildren: () =>

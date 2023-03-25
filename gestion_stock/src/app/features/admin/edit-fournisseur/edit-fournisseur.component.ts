@@ -28,9 +28,7 @@ export class EditFournisseurComponent implements OnInit {
         .subscribe((data) => {
           this.isRecupereded = true;
           this.data = data;
-          console.log(data
-            );
-
+          console.log(data);
           this.load();
         });
     });

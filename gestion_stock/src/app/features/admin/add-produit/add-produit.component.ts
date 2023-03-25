@@ -1,8 +1,9 @@
-import { Produit } from 'src/app/shared/models/produit.model';
+import { ToastService } from 'angular-toastify';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProduitService } from 'src/app/shared/services/produit.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-add-produit',
@@ -11,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProduitComponent implements OnInit {
   public produitForms?: FormGroup <any>|any;
-  constructor(private produitService: ProduitService, private router: Router) {}
+  constructor(private toastService:ToastService ,private produitService: ProduitService, private router: Router) {}
 
   ngOnInit(): void {
     this.uplod();
@@ -34,11 +35,15 @@ uplod (){
 confirmer(){
  const data = this.produitForms.value;
 this.produitService.addProduit(data).subscribe((data)=>{
+
 this.router.navigate(['admin/list-produit'])
 })
 };
 cancel(){
+
 this.router.navigate(['admin/list-produit'])
+this.toastService.success("srrrrrrrrrrrrrrrrrrrrrrrrrrrra");
+
 };
 
 }

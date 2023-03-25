@@ -1,22 +1,22 @@
-<h1>ADD FOURNISSUER</h1>
-<button mat-button routerLink="/admin/add-fournisseur"> Add</button>
+<h1>LIST FOURNISSUERS</h1>
+<button routerLink="/admin/add-fournisseur"> Add</button>
 <div *ngFor="let f of fournisseurs">
   <mat-card class="example-card" style="margin :20px ;border: 1px solid">
 
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{f.nom}}</mat-card-title>
+
+      <mat-card-title>Nom : {{f.nom}}</mat-card-title>
     </mat-card-header>
     <img mat-card-image src="" alt="">
     <mat-card-content>
-      <mat-card-title>{{f.email}}</mat-card-title>
-      <mat-card-title>{{f.telephone}}</mat-card-title>
-      <mat-card-title>{{f.adresse}}</mat-card-title>
-      <mat-card-title>{{f.logo}}</mat-card-title>
+      <mat-card-title>Email : {{f.email}}</mat-card-title>
+      <mat-card-title>Telephone : {{f.telephone}}</mat-card-title>
+      <mat-card-title>Adresse : {{f.adresse}}</mat-card-title>
+      <mat-card-title>Logo : {{f.logo}}</mat-card-title>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button (click)="editFournisseur(f.idFournisseur)">Edit</button>
-      <button mat-button (click)="deleteFournisseur(f.idFournisseur)">Delete</button>
+      <button  (click)="editFournisseur(f.idFournisseur)">Edit</button>
+      <button  (click)="deleteFournisseur(f.idFournisseur)">Delete</button>
     </mat-card-actions>
   </mat-card>
 </div>

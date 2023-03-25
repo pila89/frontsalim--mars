@@ -32,11 +32,11 @@ export class AddFournisseurComponent implements OnInit {
   addFournisseur() {
     const data = this.fournisseurForm.value;
     this.fournisseurService.addFournisseur(data).subscribe((data) => {
-      this.router.navigate(['admin/list-fournisseur']);
+      this.router.navigate(['admin/list-fournisseurs']);
     });
   }
 
   cancel() {
-    this.router.navigate(['admin/list-fournisseur']);
+    this.router.navigate(['admin/list-fournisseurs']);
   }
 }

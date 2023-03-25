@@ -27,18 +27,26 @@ export class ProduitService {
   }
   getAllProduits(): Observable<Produit[]> {
     return this.httpClient.get<Produit[]>(
+      
       `http://localhost:8080/produits/getAllProduits`
+
     );
   }
   getProduitById(id: number): Observable<Produit> {
     return this.httpClient.get<Produit>(
-      `http://localhost:8080/produits/prouduit/${id}`
+      `http://localhost:8080/produits/Produit/${id}`
     );
   }
 
   deleteProduitById(id: number): Observable<Produit> {
     return this.httpClient.delete<Produit>(
       `http://localhost:8080/produits/produit/${id}`
+    );
+  }
+  updateProduit(produit: Produit): Observable<Produit> {
+    return this.httpClient.put<Produit>(
+      `http://localhost:8080/produits/update`,
+      produit
     );
   }
 }

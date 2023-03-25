@@ -8,10 +8,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { ConfirmationModalComponent } from './shared/components/confirmation-modal/confiramtion-modal.component';
-import { ToastComponent } from './shared/components/toast/toast.component';
+import { AngularToastifyModule, ToastService, } from 'angular-toastify';
 import { DeleteModalComponent } from './shared/components/delete-modal/delete-modal.component';
 import { AccessDeniedComponent } from './shared/components/access-denied/access-denied.component';
 import { NotFoundComponentComponent } from './shared/components/not-found-component/not-found-component.component';
+import { ToastComponent } from './shared/components/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -30,9 +31,10 @@ import { NotFoundComponentComponent } from './shared/components/not-found-compon
     BrowserAnimationsModule,
     FormsModule,
     MatSelectModule,
+    AngularToastifyModule
 
   ],
-  providers: [],
+  providers: [ToastService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

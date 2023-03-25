@@ -1,20 +1,20 @@
-<h1>ADD PRODUIT</h1>
-<button mat-button routerLink="/admin/add-produit"> Add</button>
+<h1>LIST PRODUIT</h1>
+<button  routerLink="/admin/add-produit"> Add</button>
 <div *ngFor="let p of produits">
-  <mat-card  class="example-card">
+  <mat-card class="example-card" style="margin :20px ;border: 1px solid" >
     <mat-card-header>
-      <mat-card-title>{{p.labelle}}</mat-card-title>
-      <mat-card-title>{{p.photoface}}</mat-card-title>
-      <mat-card-title>{{p.quantiteSotock}}</mat-card-title>
-      <mat-card-title>{{p.prixPromotion}}</mat-card-title>
-      <mat-card-title>{{p.description}}</mat-card-title>
-      <mat-card-title>{{p.photoProfil}}</mat-card-title>
-      <mat-card-title>{{p.prix}}</mat-card-title>
-      <mat-card-title>{{p.dateExpiration}}</mat-card-title>
+      <mat-card-title>Labelle: {{p.labelle}}</mat-card-title>
+      <mat-card-title>Photoface : {{p.photoface}}</mat-card-title>
+      <mat-card-title>QuantiteSotock : {{p.quantiteSotock}}</mat-card-title>
+      <mat-card-title>PrixPromotion : {{p.prixPromotion}}</mat-card-title>
+      <mat-card-title>description : {{p.description}}</mat-card-title>
+      <mat-card-title>photoProfil : {{p.photoProfil}}</mat-card-title>
+      <mat-card-title>prix : {{p.prix}}</mat-card-title>
+      <mat-card-title>dateExpiration : {{p.dateExpiration}}</mat-card-title>
       <!-- <mat-card-title>{{p.prix}}</mat-card-title> -->
     </mat-card-header>
 
-    <mat-card-content>sds
+    <mat-card-content>
     </mat-card-content>
     <mat-card-actions>
       <button (click)="updateProduit(p.idProduit)">Edit </button>
