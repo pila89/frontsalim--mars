@@ -1,1 +1,21 @@
-<p>delete-modal works!</p>
+
+<div >
+  <div fxFlex style="margin-left: 17px;margin-top: 14px;">
+      <h1 mat-dialog-title>Delete</h1>
+  </div>
+  <div fxFlex style="float: right;">
+      <div style="float: right;">
+          <div>close</div>
+
+      </div>
+
+  </div>
+</div>
+<div style="margin: 17px;">
+ Are You sure to delete the element selected
+</div>
+
+<div style="margin: 17px;">
+  <button mat-stroked-button (click)="delete()">Validate</button>
+<button mat-stroked-button mat-dialog-close>Cancel</button>
+</div>

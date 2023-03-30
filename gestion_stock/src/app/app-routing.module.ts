@@ -1,14 +1,15 @@
+import { DashboardComponent } from './shared/components/page/page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccessDeniedComponent } from './shared/components/access-denied/access-denied.component';
 import { NotFoundComponentComponent } from './shared/components/not-found-component/not-found-component.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: '/authentication/login',
-  //   pathMatch: 'full',
-  // },
+   {
+     path: '',
+     redirectTo: '/authentifcation/login',
+     pathMatch: 'full',
+   },
 
   {
     path: 'authentifcation',
@@ -40,7 +41,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: NotFoundComponentComponent,
+    component:  NotFoundComponentComponent
   },
 ];
 

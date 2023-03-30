@@ -1,3 +1,4 @@
+import { DashboardComponent } from './../../shared/components/page/page.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UserCardComponent } from './../super-admin/user-card/user-card.component';
 import { AddEditUserComponent } from './../super-admin/add-edit-user/add-edit-user.component';
@@ -12,6 +13,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { AddUserComponent } from './add-user/add-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { PageModule } from 'src/app/shared/components/page/page.module';
+
 
 
 @NgModule({
@@ -22,6 +25,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     UserCardComponent,
     AddUserComponent,
     EditUserComponent,
+
+
   ],
   imports: [
     CommonModule,
@@ -31,7 +36,9 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     ReactiveFormsModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    PageModule
+
   ],
 })
 export class SuperAdminModule {}

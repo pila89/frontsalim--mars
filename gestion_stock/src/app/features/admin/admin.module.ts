@@ -13,6 +13,8 @@ import { AddFournisseurComponent } from './add-fournisseur/add-fournisseur.compo
 import { EditFournisseurComponent } from './edit-fournisseur/edit-fournisseur.component';
 import { AddProduitComponent } from './add-produit/add-produit.component';
 import { EditProduitComponent } from './edit-produit/edit-produit.component';
+import { DashboardComponent } from 'src/app/shared/components/page/page.component';
+import { PageModule } from 'src/app/shared/components/page/page.module';
 
 
 @NgModule({
@@ -35,7 +37,8 @@ import { EditProduitComponent } from './edit-produit/edit-produit.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    PageModule
 
   ]
 })

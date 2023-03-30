@@ -1,0 +1,19 @@
+<nav>
+  <div class="logo">
+    <a routerLink="/">
+      <img src="assets/logo.png" alt="Logo">
+    </a>
+  </div>
+ 
+  <ul>
+    <li *ngFor="let menu of menuList ; index as i;">
+      <a [routerLink]="menu.routerLink">{{menu.name}}</a>
+    </li>
+    <li>
+      <a routerLink="/profile">Mon profil</a>
+    </li>
+    <li>
+      <a (click)="logout()">Se déconnecter</a>
+    </li>
+  </ul>
+</nav>

@@ -12,6 +12,8 @@ export class ToastComponent implements OnInit {
   public snackbarRef: MatSnackBarRef<ToastComponent>) { }
 
   ngOnInit(): void {
+    console.log(this.data);
+
   }
 
 }

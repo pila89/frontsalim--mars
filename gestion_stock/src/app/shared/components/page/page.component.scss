@@ -1,0 +1,46 @@
+.menu {
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    li {
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+          color: #007bff;
+        }
+      }
+    }
+  }
+}
+
+.admin-menu {
+  ul {
+    li {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+
+.superadmin-menu {
+  ul {
+    li {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,1 +1,30 @@
-<p>login works!</p>
+<div class="limite">
+  <form [formGroup]="loginForm">
+    <div class="center top">
+      Login
+    </div>
+    <div class="center top">
+      <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" alt="ko" style="width: 80px;" />
+    </div>
+    <div class="center top">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput placeholder="xxx@xxx.xxx" type="email">
+      </mat-form-field>
+    </div>
+    <div class="center top">
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput placeholder="xxxx" type="password">
+      </mat-form-field>
+    </div>
+
+  </form>
+    <div class="center top">
+      <button mat-button (click)="submit()">
+        Submit
+      </button>
+
+    </div>
+</div>
+

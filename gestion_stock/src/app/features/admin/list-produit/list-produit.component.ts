@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Produit } from 'src/app/shared/models/produit.model';
 import { ProduitService } from 'src/app/shared/services/produit.service';
-import { ConfirmationModalComponent } from 'src/app/shared/components/confirmation-modal/confiramtion-modal.component';
+import { ConfirmationDeleteComponent } from 'src/app/shared/components/delete-modal/delete-modal.component';
 
 @Component({
   selector: 'app-list-produit',
@@ -30,15 +30,17 @@ export class ListProduitComponent implements OnInit {
   }
 
   deleteProduit(idProduit: any) {
-    // let dialog = this.dialogRef.open(ConfirmationModalComponent, {
-    //   width: '400px',
-    // // });
-    // dialog.afterClosed().subscribe(() => {
+    let dialogRef = this.dialogRef.open(ConfirmationDeleteComponent, {
+      height: '195px',
+      panelClass: 'custom-modalbox'
+    });
+    dialogRef.afterClosed().subscribe(()=>{
+
       this.produitService.deleteProduitById(idProduit).subscribe(() => {
         this.produitService.getAllProduits().subscribe((data) => {
           this.produits = data;
         });
       });
-    // });
-  }
+
+  })}
 }
