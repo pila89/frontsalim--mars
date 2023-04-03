@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthentifcationComponent } from './authentifcation.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,11 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent,
   },
+  {
+    path: 'reset',
+    component: ResetPasswordComponent,
+  },
+
 ];
 
 @NgModule({

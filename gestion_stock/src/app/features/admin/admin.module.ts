@@ -13,8 +13,14 @@ import { AddFournisseurComponent } from './add-fournisseur/add-fournisseur.compo
 import { EditFournisseurComponent } from './edit-fournisseur/edit-fournisseur.component';
 import { AddProduitComponent } from './add-produit/add-produit.component';
 import { EditProduitComponent } from './edit-produit/edit-produit.component';
-import { DashboardComponent } from 'src/app/shared/components/page/page.component';
 import { PageModule } from 'src/app/shared/components/page/page.module';
+import { TableFournisseurComponent } from './table-fournisseur/table-fournisseur.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatSortModule } from '@angular/material/sort';
+
 
 
 @NgModule({
@@ -25,7 +31,8 @@ import { PageModule } from 'src/app/shared/components/page/page.module';
     AddFournisseurComponent,
     EditFournisseurComponent,
     AddProduitComponent,
-    EditProduitComponent
+    EditProduitComponent,
+    TableFournisseurComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +45,12 @@ import { PageModule } from 'src/app/shared/components/page/page.module';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    PageModule
+    PageModule,
+    MatTableModule,
+    MatIconModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+     MatSortModule
 
   ]
 })

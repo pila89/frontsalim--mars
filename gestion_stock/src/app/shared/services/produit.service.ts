@@ -27,9 +27,7 @@ export class ProduitService {
   }
   getAllProduits(): Observable<Produit[]> {
     return this.httpClient.get<Produit[]>(
-      
       `http://localhost:8080/produits/getAllProduits`
-
     );
   }
   getProduitById(id: number): Observable<Produit> {
@@ -38,8 +36,8 @@ export class ProduitService {
     );
   }
 
-  deleteProduitById(id: number): Observable<Produit> {
-    return this.httpClient.delete<Produit>(
+  deleteProduitById(id: number) {
+     return this.httpClient.delete<Produit>(
       `http://localhost:8080/produits/produit/${id}`
     );
   }

@@ -30,17 +30,10 @@ export class ListProduitComponent implements OnInit {
   }
 
   deleteProduit(idProduit: any) {
-    let dialogRef = this.dialogRef.open(ConfirmationDeleteComponent, {
-      height: '195px',
-      panelClass: 'custom-modalbox'
-    });
-    dialogRef.afterClosed().subscribe(()=>{
-
-      this.produitService.deleteProduitById(idProduit).subscribe(() => {
-        this.produitService.getAllProduits().subscribe((data) => {
-          this.produits = data;
-        });
+    this.produitService.deleteProduitById(idProduit).subscribe(() => {
+      this.produitService.getAllProduits().subscribe((data) => {
+        this.produits = data;
       });
-
-  })}
+    });
+  }
 }

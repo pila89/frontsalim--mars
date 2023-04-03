@@ -7,6 +7,8 @@ import { ListFournisseurComponent } from './list-fournisseur/list-fournisseur.co
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
+import { TableFournisseurComponent } from './table-fournisseur/table-fournisseur.component';
+
 
 const routes: Routes = [
 {
@@ -16,6 +18,8 @@ const routes: Routes = [
       { path: '', redirectTo:'list-fournisseurs',pathMatch:"full" },
       { path: 'list-fournisseurs',
       component: ListFournisseurComponent },
+      { path: 'table-fournisseurs',
+      component: TableFournisseurComponent },
       { path: 'add-fournisseur',
       component: AddFournisseurComponent },
       { path: 'edit-fournisseur/:id',

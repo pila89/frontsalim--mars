@@ -1,10 +1,10 @@
 <nav>
   <div class="logo">
-    <a routerLink="/">
-      <img src="assets/logo.png" alt="Logo">
+    <a >
+     
     </a>
   </div>
- 
+
   <ul>
     <li *ngFor="let menu of menuList ; index as i;">
       <a [routerLink]="menu.routerLink">{{menu.name}}</a>

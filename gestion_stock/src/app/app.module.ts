@@ -16,11 +16,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { AngularToastifyModule, ToastService } from 'angular-toastify';
 import { ContactnousComponent } from './shared/components/contactnous/contactnous.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDialogModule} from '@angular/material/dialog';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-  
     AccessDeniedComponent,
     NotFoundComponentComponent,
     ContactnousComponent,
@@ -39,6 +43,11 @@ import { ContactnousComponent } from './shared/components/contactnous/contactnou
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatSidenavModule,
+    MatDialogModule
+
+
   ],
   providers: [ToastService],
 

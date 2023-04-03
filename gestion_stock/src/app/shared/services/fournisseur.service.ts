@@ -23,14 +23,14 @@ export class FournisseurService {
     );
   }
 
-  getFournisseurById(id: number): Observable<Fournisseur> {
+  getFournisseurById(idFournisseur: number): Observable<Fournisseur> {
     return this.httpClient.get<Fournisseur>(
-      `http://localhost:8080/fournisseurs/getFournisseur/${id}`
+      `http://localhost:8080/fournisseurs/getFournisseur/${idFournisseur}`
     );
   }
 
-  deleteFournisseurById(id: number){
-   return this.httpClient.delete(`http://localhost:8080/fournisseurs/delete/${id}`);
+  deleteFournisseurById(idFournisseur: number){
+    return this.httpClient.delete(`http://localhost:8080/fournisseurs/delete/${idFournisseur}`);
   }
 
   updateFournisseur(fournisseur: Fournisseur): Observable<Fournisseur> {

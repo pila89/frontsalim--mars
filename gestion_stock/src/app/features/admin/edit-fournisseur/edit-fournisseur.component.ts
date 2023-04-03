@@ -43,12 +43,18 @@ export class EditFournisseurComponent implements OnInit {
     });
   }
   confirmer() {
-    const data = this.fournisseurForm?.value;
+    const data = {
+      ...this.fournisseurForm.value,
+      ...{
+        idFournisseur: this.idFournisseur,
+      },
+    };
+
     this.fournisseurService.updateFournisseur(data).subscribe(() => {
-      this.router.navigate(['admin/list-fournisseur']);
+      this.router.navigate(['admin/table-fournisseurs']);
     });
   }
   annuler() {
-    this.router.navigate(['admin/list-fournisseur']);
+    this.router.navigate(['admin/table-fournisseurs']);
   }
 }
