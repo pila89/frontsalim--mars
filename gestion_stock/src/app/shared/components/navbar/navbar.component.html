@@ -1,19 +1,166 @@
-<nav>
-  <div class="logo">
-    <a >
-     
-    </a>
-  </div>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+    <div class="menu border ">
+      <div style="width:100% " style="background-color: yellow; ">
+      </div>
+      <div>
+        <!-- Dashbord -->
+        <div style="height: 80px;background-color: #7571f9;">
+          <div style="padding-top: 30px;margin-left: 20px;">
 
-  <ul>
-    <li *ngFor="let menu of menuList ; index as i;">
-      <a [routerLink]="menu.routerLink">{{menu.name}}</a>
-    </li>
-    <li>
-      <a routerLink="/profile">Mon profil</a>
-    </li>
-    <li>
-      <a (click)="logout()">Se déconnecter</a>
-    </li>
-  </ul>
-</nav>
+          </div>
+        </div>
+        <mat-sidenav-container>
+          <mat-accordion>
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>alarm</mat-icon>
+                  Gestion des utilisateurs
+                </mat-panel-title>
+
+              </mat-expansion-panel-header>
+
+              <mat-panel-title (click)="redirect()">
+
+                List Users
+              </mat-panel-title>
+              <mat-panel-title routerLink="">
+
+                Add User
+              </mat-panel-title>
+            </mat-expansion-panel>
+          </mat-accordion>
+          <mat-accordion>
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>flare</mat-icon>
+                  Layouts
+                </mat-panel-title>
+
+              </mat-expansion-panel-header>
+              <p>Home 1</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+        </mat-sidenav-container>
+      </div>
+    </div>
+  </mat-drawer>
+  <div class="example-sidenav-content example-sidenav">
+    <div class="bloc ">
+      <div class="navbar " style="display: flex;">
+        <div style="width: 100%;">
+          <mat-toolbar>
+            <div class="border" style="width: 100%;display: flex;justify-content: space-between;">
+              <div style="display: flex;">
+                <div class="mrgin">
+                  <button (click)="drawer.toggle()" mat-icon-button class="example-icon"
+                    aria-label="Example icon-button with menu icon">
+                    <mat-icon>menu</mat-icon>
+                  </button>
+                </div>
+                <div class="mrgin">
+                  loop
+                </div>
+                <div class="mrgin">
+                  input
+                </div>
+              </div>
+              <div style="display: flex;">
+                <div class="mrgin">
+                  1
+                </div>
+                <div class="mrgin">
+                  1
+                </div>
+                <div class="mrgin">
+                  1
+                </div>
+                <div class="mrgin">
+                  1
+                </div>
+              </div>
+            </div>
+          </mat-toolbar>
+        </div>
+      </div>
+
+<router-outlet></router-outlet>
+      <!-- <div class="contenu  ">
+        <div class="one ">
+          <div class="width-25  ">
+            <div class=" padding-25">
+              <mat-card style="height: 160px;">
+                xxxx
+              </mat-card>
+            </div>
+          </div>
+          <div class="width-25  ">
+            <div class=" padding-25">
+              <mat-card style="height: 160px;">
+                xxxx
+              </mat-card>
+            </div>
+          </div>
+          <div class=" width-25  ">
+            <div class=" padding-25">
+              <mat-card style="height: 160px;">
+                xxxx
+              </mat-card>
+            </div>
+          </div>
+          <div class=" width-25  ">
+            <div class=" padding-25">
+              <mat-card style="height: 160px;background-color: #7d69fb;border-radius: 4%;">
+                xxxx
+              </mat-card>
+            </div>
+          </div>
+        </div>
+        <div class="two">
+          <div style="width: 100%;">
+            <div class=" padding-25">
+              <mat-card>
+                <div style="display: flex; justify-content: space-between;">
+
+                  <div>
+                    <div>
+                      ddd
+                    </div>
+                    <div>
+                      djjd
+                    </div>
+                    <div>
+                      lll
+                    </div>
+                  </div>
+
+                  <div>
+                    <div style="display: flex;">
+                      <div style="margin-left: 5px;margin-right: 5px;">kkk</div>
+                      <div style="margin-left: 5px;margin-right: 5px;">lll</div>
+                      <div style="margin-left: 5px;margin-right: 5px;">mmmm</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border" style="height:280px;">
+                  BBBBBBBBBBBBB
+                </div>
+                <div style="width: 100%;display: flex;">
+                  <div style="width: 50%; padding: 5px;">
+                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                  </div>
+                  <div style="width: 50%;  padding: 5px;">
+                    <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</mat-drawer-container>

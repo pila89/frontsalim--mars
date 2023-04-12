@@ -13,11 +13,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { AddUserComponent } from './add-user/add-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
-import { PageModule } from 'src/app/shared/components/page/page.module';
+
 import { MatTableModule } from '@angular/material/table';
 import { UserTableComponent } from './user-table/user-table.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PageModule } from 'src/app/shared/components/page/page.module';
 
 
 
@@ -42,10 +43,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    PageModule,
     MatTableModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    PageModule
   ],
 })
 export class SuperAdminModule {}

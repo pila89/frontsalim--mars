@@ -13,7 +13,7 @@ export class SuperAdminComponent implements OnInit {
   public menuList = [
     {
       name: 'Gestion des users',
-      routerLink: 'list-user',
+      routerLink: 'user-table',
     },
   ];
 }

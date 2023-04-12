@@ -4,6 +4,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserTableComponent } from './user-table/user-table.component';
+import { ListUserComponent } from './list-user/list-user.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'user-table', pathMatch: 'full' },
       { path: 'user-table', component: UserTableComponent },
-      { path: 'list-user', component: UserTableComponent },
+      { path: 'list-user', component: ListUserComponent },
       { path: 'add-user', component: AddUserComponent },
       { path: 'edit-user/:id', component: EditUserComponent },
     ],

@@ -13,11 +13,11 @@ import { TableFournisseurComponent } from './table-fournisseur/table-fournisseur
 const routes: Routes = [
 {
      path: '',
-     component: AdminComponent,
+     component: AdminComponent, 
     children: [
-      { path: '', redirectTo:'list-fournisseurs',pathMatch:"full" },
-      { path: 'list-fournisseurs',
-      component: ListFournisseurComponent },
+      { path: '', redirectTo:'table-fournisseurs',pathMatch:"full" },
+      // { path: 'list-fournisseurs',
+      // component: ListFournisseurComponent },
       { path: 'table-fournisseurs',
       component: TableFournisseurComponent },
       { path: 'add-fournisseur',

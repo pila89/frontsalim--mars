@@ -7,17 +7,37 @@ import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { MatCardModule } from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastModule } from 'src/app/shared/components/toast/toast.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
+const materials = [
+  MatCardModule,
+  MatInputModule,
+  MatButtonModule,
+  MatCardModule,
+  MatInputModule,
+  MatButtonModule,
+  MatFormFieldModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatSidenavModule,
+  MatSelectModule,
+  MatProgressSpinnerModule,
+  MatListModule,
+  MatExpansionModule,
+  MatProgressBarModule,
+];
 @NgModule({
   declarations: [
     AuthentifcationComponent,
@@ -27,21 +47,12 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     ForgetPasswordComponent,
   ],
   imports: [
+    ...materials,
     CommonModule,
     AuthentifcationRoutingModule,
-    MatCardModule,
-    MatInputModule,
-    MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
     ToastModule,
-    MatFormFieldModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatSelectModule,
-    MatProgressSpinnerModule
-
-  ]
+  ],
 })
-export class AuthentifcationModule { }
+export class AuthentifcationModule {}

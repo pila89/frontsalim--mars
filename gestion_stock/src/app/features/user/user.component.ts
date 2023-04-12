@@ -11,5 +11,11 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public menuList = [
+    {
+      name: 'Gestion des users',
+      routerLink: 'user-table',
+    },
+  ];
 
 }

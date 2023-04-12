@@ -1,4 +1,4 @@
-import { DashboardComponent } from './shared/components/page/page.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccessDeniedComponent } from './shared/components/access-denied/access-denied.component';

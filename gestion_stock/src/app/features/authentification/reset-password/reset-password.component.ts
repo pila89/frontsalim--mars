@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialog} from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,10 +9,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   styleUrls: ['./reset-password.component.scss']
 })
 export class ResetPasswordComponent implements OnInit {
-  showFiller = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+  
+  }
 
-}

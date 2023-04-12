@@ -40,12 +40,15 @@ export class TableFournisseurComponent implements OnInit {
     this.upload();
   }
   upload() {
-    this.fournisseurService.getAllFournisseurs().subscribe((data) => {
+    // this.fournisseurService.getAllFournisseurs().subscribe((data) => {
+    //   console.log(data
+    //     );
 
-      this.dataSource = new MatTableDataSource(data);
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.matSort;
-    });
+    //   this.dataSource = new MatTableDataSource(data);
+    //   this.dataSource.paginator = this.paginator;
+    //   this.dataSource.sort = this.matSort;
+    //   this.fournisseurs = data;
+    // });
   }
   editFournisseur(idFournisseur: any) {
     this.router.navigate([`admin/edit-fournisseur/${idFournisseur}`]);
