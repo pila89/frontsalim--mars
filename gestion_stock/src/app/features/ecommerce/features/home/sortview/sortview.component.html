@@ -1,0 +1,32 @@
+<mat-card>
+  <div class="border next-together space-between ">
+    <div class="border ">
+      <button mat-button [matMenuTriggerFor]="menu">Sort
+        <mat-icon>expand_more</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button (click)="sortList('desc')"mat-menu-item>Price +++ </button>
+        <button (click)="sortList('asd')"mat-menu-item>Price ---</button>
+      </mat-menu>
+    </div>
+    <div class="border next-together space-between">
+      <div class="border ">
+        <button mat-button [matMenuTriggerFor]="menu1">
+          Show {{itemCount}}
+          <mat-icon>expand_more</mat-icon>
+        </button>
+
+        <mat-menu #menu1="matMenu">
+          <button (click)="updateList(12)"mat-menu-item>12</button>
+          <button (click)="updateList(24)"mat-menu-item>24</button>
+          <button (click)="updateList(36)"mat-menu-item>36</button>
+        </mat-menu>
+      </div>
+      <div class="border ">
+        <mat-icon (click)="displayView('view_list')" >view_list</mat-icon>
+        <mat-icon (click)="displayView('view_module')">view_module</mat-icon>
+        <mat-icon (click)="displayView('view_comfy')">view_comfy</mat-icon>
+      </div>
+    </div>
+  </div>
+</mat-card>

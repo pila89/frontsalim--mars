@@ -1,0 +1,31 @@
+<div>
+
+  <div class="next-together">
+
+    <div class="one p-5 ">
+      <app-filter [categories]="categories$ |async" (categorieFilter)="filter($event)"></app-filter>
+    </div>
+    <div class="two">
+      <div>
+        <app-sortview (sortEvent)="sort($event)" (showEvent)="show($event)" (displayEvent)="display($event)"></app-sortview>
+      </div>
+      <div class=" next-together" style="flex-wrap: wrap">
+        <div class=" three" *ngFor="let p of products | searchFilter: selectedCategorie">
+
+          <div *ngIf="displayType==='view_list'">
+            <app-product-item [product]="p" ></app-product-item>
+          </div>
+          <div *ngIf="displayType==='view_module'">
+            salim
+          </div>
+          <div *ngIf="displayType==='view_comfy'">
+            hssss
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

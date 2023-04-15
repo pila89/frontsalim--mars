@@ -6,3 +6,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 {
   border: 1px solid black;
 }
+.next-together {
+  display: flex;
+}
+.space-between{
+  justify-content: space-between;
+}
+
+.full-width{
+  width: 100%;
+}
+.center{
+  display: flex;
+  justify-content: center;
+}

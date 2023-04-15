@@ -39,6 +39,7 @@ const routes: Routes = [
     path: 'access-denied',
     component: AccessDeniedComponent,
   },
+   { path: 'ecommerce', loadChildren: () => import('./features/ecommerce/ecommerce.module').then(m => m.EcommerceModule) },
   {
     path: '**',
     component:  NotFoundComponentComponent

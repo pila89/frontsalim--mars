@@ -1,0 +1,18 @@
+
+<div style="display: flex;justify-content: center;">
+  <div style="width: 200px;"  class="border">
+    <mat-accordion >
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Categories
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        <div *ngFor="let categorie of categories ">
+        <button (click)="click(categorie)"> {{categorie}}</button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

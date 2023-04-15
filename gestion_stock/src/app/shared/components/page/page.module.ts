@@ -19,6 +19,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MaterialsModule } from '../materials/materials.module';
 
 const materials = [
   MatCardModule,
@@ -62,7 +63,8 @@ const materials = [
 @NgModule({
   declarations: [DashboardComponent,NavbarComponent,FooterComponent],
   imports: [RouterModule,...materials,
-  CommonModule],
+  CommonModule,
+  MaterialsModule],
   providers: [],
 
   exports: [DashboardComponent],

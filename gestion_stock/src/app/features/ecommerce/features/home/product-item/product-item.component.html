@@ -1,0 +1,26 @@
+<mat-card style="height: 300px;">
+  <div>
+    <div class="center">
+      <img src="{{product.image}}" style="height: 200px ; max-width: 100%; " />
+    </div>
+    <div class="center">
+
+      {{product.category}}
+    </div>
+    <div class="center" style="margin-top: 5px; margin-bottom: 5px;">
+     {{product.title}}
+    </div>
+    <div class="next-together space-between">
+      <div style="color: red;">
+        {{product.price|currency}}
+      </div>
+      <div>
+       <mat-icon>shopping_cart</mat-icon>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</mat-card>
